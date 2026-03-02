@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Mostafa Library CNAD API</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f4f6f8;
+    }
+    h1 { color: #2c3e50; }
+    h2 { margin-top: 30px; }
+    .endpoint {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    code {
+      background: #eee;
+      padding: 4px 6px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Mostafa Library Management API</h1>
+<p>Cloud-Native Microservices Architecture using Docker & Nginx API Gateway</p>
+
+<h2>Base URL</h2>
+<div class="endpoint">
+  <code>http://localhost:8080</code>
+</div>
+
+<h2>Book Service</h2>
+
+<div class="endpoint">
+  <strong>GET /books</strong><br>
+  Retrieve all books
+</div>
+
+<div class="endpoint">
+  <strong>GET /books/:id</strong><br>
+  Retrieve single book
+</div>
+
+<div class="endpoint">
+  <strong>POST /books</strong><br>
+  Body:
+  <code>{ "title": "Book Title", "author": "Author Name" }</code>
+</div>
+
+<h2>Member Service</h2>
+
+<div class="endpoint">
+  <strong>GET /members</strong><br>
+  Retrieve all members
+</div>
+
+<div class="endpoint">
+  <strong>GET /members/:id</strong><br>
+  Retrieve single member
+</div>
+
+<div class="endpoint">
+  <strong>POST /members</strong><br>
+  Body:
+  <code>{ "name": "Member Name", "email": "email@example.com" }</code>
+</div>
+
+<h2>Loan Service</h2>
+
+<div class="endpoint">
+  <strong>GET /loans</strong><br>
+  Retrieve all loans
+</div>
+
+<div class="endpoint">
+  <strong>POST /loans</strong><br>
+  Body:
+  <code>{ "bookId": 1, "memberId": 1 }</code>
+</div>
+
+<h2>Health Endpoints</h2>
+
+<div class="endpoint">
+  <code>/gateway/health</code><br>
+  <code>/books/health</code><br>
+  <code>/members/health</code><br>
+  <code>/loans/health</code>
+</div>
+
+</body>
+</html>
